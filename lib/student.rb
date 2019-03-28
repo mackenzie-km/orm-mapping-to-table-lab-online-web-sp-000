@@ -29,8 +29,8 @@ attr_accessor :name, :grade
   end
 
   def self.create(attributes)
-    attributes[name:] = name
-    attributes[grade:] = grade 
+    name = attributes[name:]
+    grade = attributes[grade:] 
     student = Student.new(name, grade)
     student.save
     student
